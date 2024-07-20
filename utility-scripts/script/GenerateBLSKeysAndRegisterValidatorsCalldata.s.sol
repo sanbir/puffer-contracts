@@ -3,14 +3,10 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "forge-std/Script.sol";
 import { stdJson } from "forge-std/StdJson.sol";
-import { Permit } from "../../mainnet-contracts/src/structs/Permit.sol";
-import { ValidatorKeyData } from "mainnet-contracts/src/struct/ValidatorKeyData.sol";
-import { IPufferProtocol } from "mainnet-contracts/src/interface/IPufferProtocol.sol";
-import { PufferProtocol } from "mainnet-contracts/src/PufferProtocol.sol";
-import { PufferVaultV2 } from "mainnet-contracts/src/PufferVaultV2.sol";
-import { ValidatorTicket } from "mainnet-contracts/src/ValidatorTicket.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "../src/ISSVClusters.sol";
+import "../src/IP2pSsvProxyFactory.sol";
 
 /**
  * See the docs for more detailed information: https://docs.puffer.fi/nodes/registration#batch-registering-validators
@@ -21,143 +17,192 @@ import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
  *
  */
 contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
-    address validatorTicketAddress;
-    PufferVaultV2 internal pufETH;
-    ValidatorTicket internal validatorTicket;
-    address internal protocolAddress;
-    PufferProtocol internal pufferProtocol;
-    string internal registrationJson;
+    address public ssvNtworkAddress = 0x38A4794cCEd47d3baf7370CcC43B560D3a1beEFA;
+    address public safe = 0x9aB843F2d60be2316F42B9764e98b532908AaB37;
 
-    string forkVersion;
-
-    bytes32 moduleToRegisterTo;
-
-    mapping(bytes32 keyHash => bool registered) internal pubKeys;
-    bytes[] internal registeredPubKeys;
+    address public p2pSsvProxyFactoryAddress = 0x87A11cF5aFF0a46A7Ffb4C00b497aa3a73015d51;
 
     struct Tx {
         address to;
         bytes data;
     }
 
-    function setUp() public {
-        if (block.chainid == 17000) {
-            // Holesky
-            validatorTicketAddress = 0xB028194785178a94Fe608994A4d5AD84c285A640;
-            protocolAddress = 0xE00c79408B9De5BaD2FDEbB1688997a68eC988CD;
-            pufferProtocol = PufferProtocol(protocolAddress);
-            forkVersion = "0x01017000";
-        } else if (block.chainid == 1) {
-            // Mainnet
-            validatorTicketAddress = 0x7D26AD6F6BA9D6bA1de0218Ae5e20CD3a273a55A;
-            protocolAddress = 0xf7b6B32492c2e13799D921E84202450131bd238B;
-            pufferProtocol = PufferProtocol(protocolAddress);
-            forkVersion = "0x00000000";
-        }
+    function run() public {
+//        Tx[] memory transactions = new Tx[](4);
+//        transactions[0] = getTx1();
+//        transactions[1] = getTx2();
+//        transactions[2] = getTx3();
+//        transactions[3] = getTx4();
 
-        pufETH = pufferProtocol.PUFFER_VAULT();
-        validatorTicket = pufferProtocol.VALIDATOR_TICKET();
+        Tx[] memory transactions = new Tx[](2);
+        transactions[0] = getTx__TEST1();
+        transactions[1] = getTx__TEST2();
+
+        _createSafeJson(safe, transactions);
     }
 
-    function run() public {
-        uint256 guardiansLength = pufferProtocol.GUARDIAN_MODULE().getGuardians().length;
+    function getTx1() internal returns(Tx memory tx) {
+        bytes[] memory publicKeys = new bytes[](7);
+        publicKeys[0] = bytes(hex'8ae430787d3cb55093dba32d4f5e7736c48d494121dc6ed5520182490b977af7ddc0ecc586296fc315f9553dd07c5486');
+        publicKeys[1] = bytes(hex'b87798a82ca43743b7b726bdad694c8c9b76b68023bde42cf97a0e4d0da7e3604d4b436b9db44ef5e56106626d95ef68');
+        publicKeys[2] = bytes(hex'a3e789d3b378c42a3c963ef549b739ca55d1cdc7211aa22ebf382e4e847ea23f12c5a5131aa835afe5743432b02df806');
+        publicKeys[3] = bytes(hex'8171e4c04ea01ab1a84746527e33fdc739ad118946ba3f1cee356f3b35e9642304a7efffd1e4db4aa556ce333687ea11');
+        publicKeys[4] = bytes(hex'95dc732567172754d9a1764b0ce4aefba1c25d82983d964bafd26e8776c8b8197695b569b00321fa581eb70d528bca57');
+        publicKeys[5] = bytes(hex'92269be7b88c417f46aafd18943783990df0952c9858bd3147815e31f48d1be5f559387b696231f98fcc5ca2b3ff354e');
+        publicKeys[6] = bytes(hex'a413b93c25f77d27c5edab2b131d06bc90215c3eb2761309fdac35b0c76e12dccf45788a7ca0228b591cafb8626ab01a');
 
-        uint256 specificModule = vm.promptUint("Do you want to register to a specific module? (0: No, 1: Yes)");
-        if (specificModule == 1) {
-            uint256 pufferModuleIdx = vm.promptUint(
-                "Please enter the module number to which you wish to register. Enter '0' to register to PUFFER_MODULE_0, Enter '1' to register to PUFFER_MODULE_1, ..."
-            );
-            moduleToRegisterTo =
-                bytes32(abi.encodePacked(string.concat("PUFFER_MODULE_", vm.toString(pufferModuleIdx))));
-        }
+        uint64[] memory operatorIds = new uint64[](4);
+        operatorIds[0] = 42;
+        operatorIds[0] = 43;
+        operatorIds[0] = 44;
+        operatorIds[0] = 45;
 
-        uint256 numberOfValidators = vm.promptUint("How many validators would you like to register?");
-        require(numberOfValidators > 0, "Number of validators must be greater than 0");
+        ISSVClusters.Cluster memory cluster = ISSVClusters.Cluster({
+            validatorCount: 5,
+            networkFeeIndex: 61300535088,
+            index: 262565454206,
+            active: true,
+            balance: 53460049500000000000
+        });
 
-        uint256 vtAmount = vm.promptUint("Enter the VT amount per validator (28 is minimum)");
-        require(vtAmount >= 28, "VT amount must be at least 28");
+        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkRemoveValidator,
+            (publicKeys, operatorIds, cluster)
+        );
 
-        address safe = vm.promptAddress("Enter the safe address");
-        require(safe != address(0), "Invalid safe address");
+        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
+    }
 
-        // Validate pufETH & VT balances
-        _validateBalances(safe, numberOfValidators, vtAmount);
+    function getTx2() internal returns(Tx memory tx) {
+        bytes[] memory publicKeys = new bytes[](7);
+        publicKeys[0] = bytes(hex'8ae430787d3cb55093dba32d4f5e7736c48d494121dc6ed5520182490b977af7ddc0ecc586296fc315f9553dd07c5486');
+        publicKeys[1] = bytes(hex'b87798a82ca43743b7b726bdad694c8c9b76b68023bde42cf97a0e4d0da7e3604d4b436b9db44ef5e56106626d95ef68');
+        publicKeys[2] = bytes(hex'a3e789d3b378c42a3c963ef549b739ca55d1cdc7211aa22ebf382e4e847ea23f12c5a5131aa835afe5743432b02df806');
+        publicKeys[3] = bytes(hex'8171e4c04ea01ab1a84746527e33fdc739ad118946ba3f1cee356f3b35e9642304a7efffd1e4db4aa556ce333687ea11');
+        publicKeys[4] = bytes(hex'95dc732567172754d9a1764b0ce4aefba1c25d82983d964bafd26e8776c8b8197695b569b00321fa581eb70d528bca57');
+        publicKeys[5] = bytes(hex'92269be7b88c417f46aafd18943783990df0952c9858bd3147815e31f48d1be5f559387b696231f98fcc5ca2b3ff354e');
+        publicKeys[6] = bytes(hex'a413b93c25f77d27c5edab2b131d06bc90215c3eb2761309fdac35b0c76e12dccf45788a7ca0228b591cafb8626ab01a');
 
-        bytes32[] memory moduleWeights = pufferProtocol.getModuleWeights();
-        uint256 moduleSelectionIndex = pufferProtocol.getModuleSelectIndex();
+        uint64[] memory operatorIds = new uint64[](4);
+        operatorIds[0] = 42;
+        operatorIds[0] = 43;
+        operatorIds[0] = 44;
+        operatorIds[0] = 45;
 
-        bytes memory approveVTCalldata =
-            abi.encodeCall(ERC20.approve, (protocolAddress, vtAmount * numberOfValidators * 1 ether));
-        bytes memory approvePufETHCalldata =
-            abi.encodeCall(ERC20.approve, (protocolAddress, 2 ether * numberOfValidators));
+        ISSVClusters.Cluster memory cluster = ISSVClusters.Cluster({
+            validatorCount: 5,
+            networkFeeIndex: 61300535088,
+            index: 262565454206,
+            active: true,
+            balance: 53460049500000000000
+        });
 
-        // 2 token approvals + validator registrations
-        Tx[] memory transactions = new Tx[](numberOfValidators + 2);
-        transactions[0] = Tx({ to: validatorTicketAddress, data: approveVTCalldata });
-        transactions[1] = Tx({ to: address(pufETH), data: approvePufETHCalldata });
+        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkRemoveValidator,
+            (publicKeys, operatorIds, cluster)
+        );
 
-        for (uint256 i = 0; i < numberOfValidators; ++i) {
-            // Select the module to register to
-            bytes32 moduleName = moduleWeights[(moduleSelectionIndex + i) % moduleWeights.length];
+        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
+    }
 
-            // If the user specified a module to register to, use that instead
-            if (moduleToRegisterTo != bytes32(0)) {
-                require(pufferProtocol.getModuleAddress(moduleToRegisterTo) != address(0), "Invalid Puffer Module");
-                moduleName = moduleToRegisterTo;
-            }
+    function getTx3() internal returns(Tx memory tx) {
+        bytes[] memory publicKeys = new bytes[](7);
+        publicKeys[0] = bytes(hex'8ae430787d3cb55093dba32d4f5e7736c48d494121dc6ed5520182490b977af7ddc0ecc586296fc315f9553dd07c5486');
+        publicKeys[1] = bytes(hex'b87798a82ca43743b7b726bdad694c8c9b76b68023bde42cf97a0e4d0da7e3604d4b436b9db44ef5e56106626d95ef68');
+        publicKeys[2] = bytes(hex'a3e789d3b378c42a3c963ef549b739ca55d1cdc7211aa22ebf382e4e847ea23f12c5a5131aa835afe5743432b02df806');
+        publicKeys[3] = bytes(hex'8171e4c04ea01ab1a84746527e33fdc739ad118946ba3f1cee356f3b35e9642304a7efffd1e4db4aa556ce333687ea11');
+        publicKeys[4] = bytes(hex'95dc732567172754d9a1764b0ce4aefba1c25d82983d964bafd26e8776c8b8197695b569b00321fa581eb70d528bca57');
+        publicKeys[5] = bytes(hex'92269be7b88c417f46aafd18943783990df0952c9858bd3147815e31f48d1be5f559387b696231f98fcc5ca2b3ff354e');
+        publicKeys[6] = bytes(hex'a413b93c25f77d27c5edab2b131d06bc90215c3eb2761309fdac35b0c76e12dccf45788a7ca0228b591cafb8626ab01a');
 
-            _generateValidatorKey(i, moduleName);
+        uint64[] memory operatorIds = new uint64[](4);
+        operatorIds[0] = 42;
+        operatorIds[0] = 43;
+        operatorIds[0] = 44;
+        operatorIds[0] = 45;
 
-            // Read the registration JSON file
-            registrationJson = vm.readFile(string.concat("./registration-data/", vm.toString(i), ".json"));
+        ISSVClusters.Cluster memory cluster = ISSVClusters.Cluster({
+            validatorCount: 5,
+            networkFeeIndex: 61300535088,
+            index: 262565454206,
+            active: true,
+            balance: 53460049500000000000
+        });
 
-            bytes[] memory blsEncryptedPrivKeyShares = new bytes[](guardiansLength);
-            blsEncryptedPrivKeyShares[0] = stdJson.readBytes(registrationJson, ".bls_enc_priv_key_shares[0]");
+        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkRemoveValidator,
+            (publicKeys, operatorIds, cluster)
+        );
 
-            ValidatorKeyData memory validatorData = ValidatorKeyData({
-                blsPubKey: stdJson.readBytes(registrationJson, ".bls_pub_key"),
-                signature: stdJson.readBytes(registrationJson, ".signature"),
-                depositDataRoot: stdJson.readBytes32(registrationJson, ".deposit_data_root"),
-                blsEncryptedPrivKeyShares: blsEncryptedPrivKeyShares,
-                blsPubKeySet: stdJson.readBytes(registrationJson, ".bls_pub_key_set"),
-                raveEvidence: ""
-            });
+        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
+    }
 
-            Permit memory pufETHPermit;
-            pufETHPermit.amount = 2 ether;
+    function getTx4() internal returns(Tx memory tx) {
+        bytes[] memory publicKeys = new bytes[](7);
+        publicKeys[0] = bytes(hex'8ae430787d3cb55093dba32d4f5e7736c48d494121dc6ed5520182490b977af7ddc0ecc586296fc315f9553dd07c5486');
+        publicKeys[1] = bytes(hex'b87798a82ca43743b7b726bdad694c8c9b76b68023bde42cf97a0e4d0da7e3604d4b436b9db44ef5e56106626d95ef68');
+        publicKeys[2] = bytes(hex'a3e789d3b378c42a3c963ef549b739ca55d1cdc7211aa22ebf382e4e847ea23f12c5a5131aa835afe5743432b02df806');
+        publicKeys[3] = bytes(hex'8171e4c04ea01ab1a84746527e33fdc739ad118946ba3f1cee356f3b35e9642304a7efffd1e4db4aa556ce333687ea11');
+        publicKeys[4] = bytes(hex'95dc732567172754d9a1764b0ce4aefba1c25d82983d964bafd26e8776c8b8197695b569b00321fa581eb70d528bca57');
+        publicKeys[5] = bytes(hex'92269be7b88c417f46aafd18943783990df0952c9858bd3147815e31f48d1be5f559387b696231f98fcc5ca2b3ff354e');
+        publicKeys[6] = bytes(hex'a413b93c25f77d27c5edab2b131d06bc90215c3eb2761309fdac35b0c76e12dccf45788a7ca0228b591cafb8626ab01a');
 
-            Permit memory vtPermit;
-            vtPermit.amount = vtAmount * 1 ether;
+        uint64[] memory operatorIds = new uint64[](4);
+        operatorIds[0] = 42;
+        operatorIds[0] = 43;
+        operatorIds[0] = 44;
+        operatorIds[0] = 45;
 
-            bytes memory registerValidatorKeyCalldata =
-                abi.encodeCall(PufferProtocol.registerValidatorKey, (validatorData, moduleName, pufETHPermit, vtPermit));
+        ISSVClusters.Cluster memory cluster = ISSVClusters.Cluster({
+            validatorCount: 5,
+            networkFeeIndex: 61300535088,
+            index: 262565454206,
+            active: true,
+            balance: 53460049500000000000
+        });
 
-            transactions[i + 2] = Tx({ to: protocolAddress, data: registerValidatorKeyCalldata });
+        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkRemoveValidator,
+            (publicKeys, operatorIds, cluster)
+        );
 
-            registeredPubKeys.push(validatorData.blsPubKey);
-        }
+        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
+    }
 
-        // Create Safe TX JSON
-        _createSafeJson(safe, transactions);
+    function getTx__TEST1() internal returns(Tx memory tx) {
+        bytes memory setMaxSsvTokenAmountPerValidatorCalldata = abi.encodeCall(
+            IP2pSsvProxyFactory.setMaxSsvTokenAmountPerValidator,
+            (50 ether)
+        );
 
-        console.log("Validator PubKeys:");
-        for (uint256 i = 0; i < registeredPubKeys.length; ++i) {
-            console.logBytes(registeredPubKeys[i]);
-        }
+        tx = Tx({ to: p2pSsvProxyFactoryAddress, data: setMaxSsvTokenAmountPerValidatorCalldata });
+    }
+
+    function getTx__TEST2() internal returns(Tx memory tx) {
+        bytes4[] memory selectors = new bytes4[](2);
+        selectors[0] = 0x6a761203;
+        selectors[1] = 0x6a761204;
+
+        bytes memory setAllowedSelectorsForOperatorCalldata = abi.encodeCall(
+            IP2pSsvProxyFactory.setAllowedSelectorsForOperator,
+            (selectors)
+        );
+
+        tx = Tx({ to: p2pSsvProxyFactoryAddress, data: setAllowedSelectorsForOperatorCalldata });
     }
 
     function _createSafeJson(address safe, Tx[] memory transactions) internal {
         // First we need to craft the JSON file for the transactions batch
         string memory root = "root";
 
-        vm.serializeString(root, "version", "\"1.0\"");
+        vm.serializeString(root, "version", "1.0");
         vm.serializeUint(root, "createdAt", block.timestamp * 1000);
         // Needs to be a string
-        vm.serializeString(root, "chainId", string.concat("\"", Strings.toString(block.chainid), "\""));
+        vm.serializeString(root, "chainId", Strings.toString(block.chainid));
 
         string memory meta = "meta";
         vm.serializeString(meta, "name", "Transactions Batch");
-        vm.serializeString(meta, "txBuilderVersion", "\"1.16.5\"");
+        vm.serializeString(meta, "txBuilderVersion", "1.16.5");
         vm.serializeAddress(meta, "createdFromSafeAddress", safe);
         vm.serializeString(meta, "createdFromOwnerAddress", "");
         vm.serializeString(meta, "checksum", "");
@@ -169,7 +214,7 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
             string memory singleTx = "tx";
 
             vm.serializeAddress(singleTx, "to", transactions[i].to);
-            vm.serializeString(singleTx, "value", "\"0\"");
+            vm.serializeString(singleTx, "value", "0");
             txs[i] = vm.serializeBytes(singleTx, "data", transactions[i].data);
         }
 
@@ -182,50 +227,6 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
         string[] memory inputs = new string[](2);
         inputs[0] = "node";
         inputs[1] = "parse-foundry-json";
-        vm.ffi(inputs);
-    }
-
-    // Validates the pufETH and VT balances for the `safe` (node operator)
-    function _validateBalances(address safe, uint256 numberOfValidators, uint256 vtBalancePerValidator) internal view {
-        uint256 pufETHRequired = pufETH.convertToSharesUp(numberOfValidators * 2 ether);
-
-        if (pufETH.balanceOf(safe) < pufETHRequired) {
-            revert("Insufficient pufETH balance");
-        }
-
-        uint256 vtRequired = numberOfValidators * vtBalancePerValidator * 1 ether;
-
-        if (validatorTicket.balanceOf(safe) < vtRequired) {
-            revert("Insufficient VT balance");
-        }
-    }
-
-    // Generates a new validator key using coral https://github.com/PufferFinance/coral/tree/main
-    function _generateValidatorKey(uint256 idx, bytes32 moduleName) internal {
-        uint256 numberOfGuardians = pufferProtocol.GUARDIAN_MODULE().getGuardians().length;
-        bytes[] memory guardianPubKeys = pufferProtocol.GUARDIAN_MODULE().getGuardiansEnclavePubkeys();
-        address moduleAddress = IPufferProtocol(protocolAddress).getModuleAddress(moduleName);
-        bytes memory withdrawalCredentials = IPufferProtocol(protocolAddress).getWithdrawalCredentials(moduleAddress);
-
-        string[] memory inputs = new string[](17);
-        inputs[0] = "coral-cli";
-        inputs[1] = "validator";
-        inputs[2] = "keygen";
-        inputs[3] = "--guardian-threshold";
-        inputs[4] = vm.toString(numberOfGuardians);
-        inputs[5] = "--module-name";
-        inputs[6] = vm.toString(moduleName);
-        inputs[7] = "--withdrawal-credentials";
-        inputs[8] = vm.toString(withdrawalCredentials);
-        inputs[9] = "--guardian-pubkeys";
-        inputs[10] = vm.toString(guardianPubKeys[0]); //@todo: Add support for multiple guardians
-        inputs[11] = "--fork-version";
-        inputs[12] = forkVersion;
-        inputs[13] = "--password-file";
-        inputs[14] = "validator-keystore-password.txt";
-        inputs[15] = "--output-file";
-        inputs[16] = string.concat("./registration-data/", vm.toString(idx), ".json");
-
         vm.ffi(inputs);
     }
 }
