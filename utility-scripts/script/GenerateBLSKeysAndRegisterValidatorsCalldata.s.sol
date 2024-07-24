@@ -2,6 +2,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "forge-std/Script.sol";
+import "forge-std/console2.sol";
 import { stdJson } from "forge-std/StdJson.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
@@ -17,6 +18,8 @@ import "../src/IP2pSsvProxyFactory.sol";
  *
  */
 contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
+    using stdJson for string;
+
     address public ssvNtworkAddress = 0x38A4794cCEd47d3baf7370CcC43B560D3a1beEFA;
     address public safe = 0x9aB843F2d60be2316F42B9764e98b532908AaB37;
 
@@ -27,18 +30,65 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
         bytes data;
     }
 
+    struct JsonEntry {
+        address owner;
+        uint256[] operator_ids;
+        bytes[] pubkeys;
+    }
+
+    struct JsonFull {
+        JsonEntry[] arr;
+    }
+
     function run() public {
+        string memory root = vm.projectRoot();
+        string memory path = string.concat(root, "/registration-data/safe_puffer.json");
+        string memory json = vm.readFile(path);
+
+        Tx[] memory transactions = new Tx[](4);
+        for (uint256 i = 0; i < 4; i++) {
+            transactions[i] = getTx(i, json);
+        }
+
 //        Tx[] memory transactions = new Tx[](4);
 //        transactions[0] = getTx1();
 //        transactions[1] = getTx2();
 //        transactions[2] = getTx3();
 //        transactions[3] = getTx4();
-
-        Tx[] memory transactions = new Tx[](2);
-        transactions[0] = getTx__TEST1();
-        transactions[1] = getTx__TEST2();
-
+//
+////        Tx[] memory transactions = new Tx[](2);
+////        transactions[0] = getTx__TEST1();
+////        transactions[1] = getTx__TEST2();
+//
         _createSafeJson(safe, transactions);
+    }
+
+    function getTx(uint256 i, string memory json) internal returns(Tx memory tx) {
+        address owner = json.readAddress(string.concat(".arr[", vm.toString(i), "].owner"));
+        console2.logAddress(owner);
+        uint256[] memory operator_ids = json.readUintArray(string.concat(".arr[", vm.toString(i), "].operator_ids"));
+        bytes[] memory pubkeys = json.readBytesArray(string.concat(".arr[", vm.toString(i), "].pubkeys"));
+
+        uint64[] memory operatorIds = new uint64[](4);
+        operatorIds[0] = uint64(operator_ids[0]);
+        operatorIds[1] = uint64(operator_ids[1]);
+        operatorIds[2] = uint64(operator_ids[2]);
+        operatorIds[3] = uint64(operator_ids[3]);
+
+        ISSVClusters.Cluster memory cluster = ISSVClusters.Cluster({
+            validatorCount: 5,
+            networkFeeIndex: 61300535088,
+            index: 262565454206,
+            active: true,
+            balance: 53460049500000000000
+        });
+
+        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkRemoveValidator,
+            (pubkeys, operatorIds, cluster)
+        );
+
+        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
     }
 
     function getTx1() internal returns(Tx memory tx) {
