@@ -44,34 +44,34 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
         if (i == 0) {
             cluster = ISSVClusters.Cluster({
                 validatorCount: 500,
-                networkFeeIndex: 75868432269,
+                networkFeeIndex: 83408029029,
                 index: 46873400,
                 active: true,
-                balance: 109389392792800000000
+                balance: 96142583030800000000
             });
         } else if (i == 1) {
             cluster = ISSVClusters.Cluster({
-                validatorCount: 250,
-                networkFeeIndex: 75996720789,
+                validatorCount: 384,
+                networkFeeIndex: 83626815184,
                 index: 0,
                 active: true,
-                balance: 97235863316000000000
+                balance: 79040466507250000000
             });
         } else if (i == 2) {
             cluster = ISSVClusters.Cluster({
-                validatorCount: 500,
-                networkFeeIndex: 75881049729,
+                validatorCount: 476,
+                networkFeeIndex: 83619801959,
                 index: 0,
                 active: true,
-                balance: 106821837126500000000
+                balance: 84665909903500000000
             });
         } else if (i == 3) {
             cluster = ISSVClusters.Cluster({
-                validatorCount: 500,
-                networkFeeIndex: 75988446774,
+                validatorCount: 475,
+                networkFeeIndex: 78447678909,
                 index: 0,
                 active: true,
-                balance: 116417868572000000000
+                balance: 104121707897000000000
             });
         } else {
             revert("No cluster");
