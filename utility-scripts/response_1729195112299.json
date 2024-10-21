@@ -1,0 +1,1084 @@
+{
+  "validators": [
+    {
+      "status": "Active",
+      "public_key": "801a53232aff3f57ada49a3c64e36bdadab3825a2028af00cdd63352583a909ff05466e793a6cb2146c6249718bdb4d5",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.306Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "802de7639dcb56a68eb83f06971abe7b9395b464500bc7c4a5f55039039afc8108f1871b4ab4761ba1e57173974d7aae",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.426Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "803f32ff8ed8dd43a3d3525b5d00659dd683fe32c670a296d204cd1bbef0616448dc348be4353e3044a2b3463cf159d2",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.320Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "80448c86f552f34e037ba3367ee7e4135d008ca887ac013336aa2373c1a21d603ce2c069db78c13e2091e85168bae283",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.324Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "804d3df637774fb710cead42649b5acb304d6dd06e468a0ac1f84cdf8d890908c19fdd6ee80373f4b89a26095604a3d1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.431Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "804ed5a3fe1eab8109619baa06cb5bc9f190f336bcdf90c5316e1db59e2b434d84bcb6119a8f764512f2dae93a5804d0",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.443Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8067864f149bb5e77816e5e88c819ec2a623d8c768cc0926355fb15bac8e79503067c7434dca14c98928bb5a4cb6b66d",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.542Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8068542db09b069f9b92063b7b4bb58cbaf13835beaeae0c36f80eb57defe4df1ce37dea362f2a05ccb12ebc2b5df8cd",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.651Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8074e81612addbcb3cc01ab7f72a2509462e2da290642af5e378e6fcdb762fc8bcfde20535fe46ead683e8fc60f311e9",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.575Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8092f78f67f84ae90a519a8c99f93f94b00505d31f5d9d95d336ea04f3cc35068e7bd3126c09eb28655f926e91d032e3",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.761Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "80b57f24569064d3e889a0dce143e17a2af18bf49dc162501aad5a0d2b6782ff46a1cd9916ad34ce3aa9017674d78c43",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.868Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "80b8dc38b56c8dbefd15dbcde6c87a2da78d7464daf6fb020f65b0c1a12682332be847df00c62920a6541a482b1cb496",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.568Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "80ccd068fcdf6cce132fb26a80fa3d2566452eea59e16e6c41e9cf06e129a82dceef2888c65fd1a889880a3c79c2707d",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:37:59.975Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8142a7b316f2a8f57144a80b723d0a62d7c52f78a34c19aaf8dcd1d544d7f85f2274a53fe727899338d0c153a659b4c9",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.695Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "814f6d6d975214de92576dff718a688e335825386eedbe4d0c64eeb403bd9e1ad59b664e8d87698eb919b399f7f22db7",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.188Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "816877645e56c9f7b5aec04d992b59fbfc8b662c9a61923069902ebb92db9f2a6f162323d7e709bd8fb7fe0b2ec31911",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.306Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "817049c96f53208371c4c6f263e704a65907286b2bfeaccc1ffd9de07f1ba68ea89728cfd7d51bc0e7a3922d5889ecdc",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.695Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8175db2ea287fb1fcea98b27aa896cb6ef0b8e6b31a4383dc8f54839cc8f2cb526dd676f601619b0bf257f2facfd7107",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.819Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "817a20e05335825853fc5bbf8ec3ead770a1751a084bf3cea0a788ba91003674f9cffaebaa8e6134b102efae954680ea",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:23.949Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "818ae3efb0d7467afe3e0ee21fb3842bfb90dfb6dee6ddd09b150c8dcfb8ece61d9233881e45c0114441b17bce99ff67",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.411Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "818fd361b6a5078ee6389de56334a8b8045059d41a68126d7b54931576a17157784c899daae70ea546fca61c9179dbb9",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.091Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "819b09ce373a266bed9f1f6f624a78de632e757b7097d684d60ff6c9731beedab98d62611006e0dca28da287f02a6747",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.242Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "81c75827934ca3e437a3a6bc98b0f102ac4a7e5566c46c88334c5e7f69bdf81535ed03653e69406410bff80953f9abde",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.518Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "81cf0c5df41255704a2d6336f7bbdb59cb0f3ee136cbae3e019e542b606fa181b60a36b34754731ee762d85084f1948a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.621Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "81d4c7a1c148df7c5fea14389960a952d2c4fab488aeefbe490fafd414bbda01258fed5a4b8837a7f249ea7f2cc8a39f",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.732Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "81dd7683f0a4aaac5f618f2f295232613cb7e6ce47badc4f3f00ed1e8a300d15618e8bbdd7aceb4db94e14c22afe8901",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.813Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "820bbf90403c06077bfe4b3c9f07c8ba136e31a6a1c0dad95f15641c58b65a293921b1a2c91b84064fc0a3fc3597370c",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:11.924Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8228924070b12e951555c2d0f0eaaaa9abd7bd62ad4226d2981656a999fb7145ec13d79daa2d84bdd02b9fabab5ecd19",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.044Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "8247f35e0918854a6e0c5b1dde39fd0c1434a2b9cd746c484c0e0c3f4bd4ddae200ab4815e696d8f5533e55277c5e067",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.183Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "824a187f79e2a4ee99daba8ca80e7207bdc3864692794164a819603b5755337f542b91e715b61cf75ca321b0cc2a1f44",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.849Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "825671054b05905ffc4d3d87f1ae9a0ea50d183179001c433286885a1efe9a72891e95f28fab8b8b14a23483028e1200",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:00.964Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82585307797359caf8ee1e33305a0bf2e86bcb258923d285efe7314fe69fb7e9e568b875939e0241a448603016c6b12d",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.067Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82616433da40b10effc5fed8dbb7748c3fdee0e010dde6e3db575c4e89e267f55c36a50535ba3b69ec178fb27ac2352f",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.172Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82803830cbad4982dc9647a983980c1eb1c7f1a9d1b12eae29c98b6b4ef8d25931bb96be47bf255f0dffa27b53b37c42",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.281Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82dce102d5c95c7d357ea30a328a50f9bd2983ebcd57447fe2303e99c1de1f2f0202f3607dea2e53b977182731a9e463",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.290Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82f1403e1dca0b0364cc0e1fba8c16334e6d6a39a9d9e908b26816da3f1e4e16a7e4c266b31e342801e996ec5ef5ad7a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.443Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "82f37fc5426fc6697c34aa5b049cefda7156b40ded4511fc991cd1202ce64205e77cc8887d0db604b3a24fa22c6369b1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.397Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "82fb76c170c03d80c1fa0421a2132d27141f99cdc75b02e4e0726d1576749fd128ec7ecd18c8ae9e62272b70675f3a45",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.503Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83204c97a78eb62cf10b17a1d3c7a3aab3563f62fe806e0c75d2106d9e09e3d5d93b13a84e2867423a5b9ca70bcd25cc",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.612Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8327b92e72210305c5a1f97d9d5475fd2110791267ec70c728e3011247367a4cf847faee8dfae62d89090c0091b14a2c",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.719Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "832d9208ac9ca0acb322f7144a0f900dbcfdd8cda78bae2b598020fe8fc0199032cdbdd4ff2dda7e75b54f72f50efaf1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.384Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "833419976b099f9fa0d775dfadb7c98b955951e7a3ae6a0911804995a95c7425fb4cec77236bd667c3ccb311739b1fbb",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.492Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "835fc1f537fb4b406f45e19dd0a2bed36ede8dfab0d77ddffa044e7ff1e8982eec7a786384502723e40fba459839b769",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.557Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "838bc5d778a697fed527ef8ab8c5f837e226c16aed6afadbc945f8cecc3ddf8f33926e633b961c8a28fe4c077f51d59a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.675Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8390ae4f28872f9d9073475d449f285faf9abcdc5a08256c046a095a6c891e481e44346f02e0067790c3d1485eee3642",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.791Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83c11f9ccbed87663912beacb9180c6eb9913986add8eb5f13edaaf2cf5ed89fe3d7cd57725e3ef7febe969c83efbf49",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:24.919Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83c9aebd66d782bad16b1e5afe6d39fa9e2a73845971e4349ed613c2f4ae079d860c355c8f0ea2924f0319e7634693cf",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.833Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83ce7331b78d591f4057ddb53a65c389584096d097991889e6bab2247c3fedccd001c5e3c825247b40594a36a66f24ff",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.039Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83d2154145a2ed287b014e2ff07fcdb631c535db52ccea61939e3b9579cc17ad5f1878a5f126754bef7ee044cf3580ab",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.169Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "83f84d98e1b327b872474e20a20e648e0aa993c37cd5e8544c8a94612261111f5ddf8f9eea2f90c19e67b6f3525cd0cc",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:12.948Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "840b3c9f30afc936e16230d45623b466db89a2d89db5e7dc4ecf710e6c8fd1eb7e54d1ff0da11d76de994fca0dd3e356",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.596Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "840dafc15d4880238e4fffb8d048099dc87c09dd1cc45109e7f29cd42c28831e3f0692ff8fbe924bd60c4a3743fcf2d1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.699Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84145fa67ff2bc4dd675e40b508ae5e327a0c28324045af1fa9c48f55e59fef1091e42d6b1635718fc51ddf66720870b",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.279Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84247dde928e4ac73bd2b6eef7449264a01972a2abe48f2f09f28aec9a7c46eed9dd346afb381c6f9242dc5d9a8c0e00",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.069Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "844bbd817492b661bcdbb875fe536b190c306d5c58a203179db2a5751be26a9e34f286657e2d6f7843057f22ec608d8a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.804Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8456b1abd26086f5670c892045ad9a39407aa459cd90674e3023c14ef39366306220b1a2fbfc31e7c7322b4b0299025b",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.181Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8461cd71f5b5d1274bb30dbe85229247c388120e4101c863dd1e40716e5e281bcdcf0e40eb7504083d0a7e4b909a7371",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.391Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "846d3e16e289369b60c74f5ef707cd8ecacd5c683b917a740825f450c319948e4bfb53f5fc4f40db5286d14224adcf09",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.510Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84742f7df818a488a834b236ff1c1e5c945cf6f77744abc9f0cfd777d580d101dabe52b97fe0ec8884df9d47399cb38e",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.293Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8491b04c06618251ade2da34066ddb4c25cedbe76e68016f3d94a6373d5d486a86c1e8b09b9476326be2c04ab33b9021",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.400Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84963fcffc40d4627aa9dd1249dbae14133a5daa764e0fea73e6617f5f261b50d67ef3f9d231c138714a31d8f9faaf3e",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.629Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84a2191f1862afc6ae3d10da115b6480902482d600c6c2a3b0ab53f74857b40e77e8c451fc8e9493f0a5c203f7c09700",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:01.910Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84a99010a7c79d665698a499908fa3dfdd159c15b4d27f950a8617bf812721354bbcbab697315a925f07cfd9a4227fb6",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.772Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "84afd3b3a89c9ad37d7c84f3151d93b6430f8aa1f232dc87006a38e1d2ddfa7e1999a42bf61c9d9339736e13cf488396",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.508Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "84d428f214e90a49dc3f5226df6b5a266408960a937e855766e1b943fae1d05956150e054302e4c5f65496b18a663d63",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.614Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85142b4dde25e6ce90b36be3be0bdb18cbce2e86a0dd3379f9426eadbacd279571032d7525d1b965413260e781d9b748",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.024Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "852d86493af67cc19f3ed2a87bc797eadfec5ba2c5f45a314bc46d6a7a379243924fbbf0755f2ecb949a6bf0e2a39c2d",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:25.913Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8567a7c93fce74e0235255b05f8eb02ed9384d91796b435c49186acda9320de587085645212795a18e6e2a1e5d54b3ad",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.169Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "856f9e676adbaa44a47d85b5e3de263e9c10d628e43e2b0a2bf404989d7e7c77636b1d2875a5b570edc4d87dd1d8b071",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.032Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8575c81f28665b03dba04b1d1674d24bbcbd7ab073a588e896d07c7ea36b715f9142201ba7fb8cd840d9df216dc360d0",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.724Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "858770cf2b3d0e75bc3072422a762edbb88e9771e54b08a0cc88ba9dd89fcd1e115fd16d182c8db99b50847fb0b9e911",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.157Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "85892f048a1cb412fec048c5f897f5eb1ac018d38c34e82df88843514fc443e03e453c96d8e56e616b584d9b96df6a6e",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.834Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85a9a0f9b3ed6fc844d5df1c9614460c6a7f4e9647ac3d0f0f480b93c43db154830cfa919ac0bbe562ba26e06a50d167",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:13.947Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85b60eb26c6294685761517a4d897923a96d611b966dd05990ccae82d61788e52e90f3d935ee1e582b70d5fc0624c734",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.270Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "85bdc53b3678b3ce1d2d75ac4d5a937d93054ca01ab33310534bfc654560279717dee1adbbe4852e8a8f23abac05e226",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.059Z"
+    },
+    {
+      "status": "Inactive",
+      "public_key": "85cb3dbf346185dcd49fe9fd0955199c87df6d40e57a46ee507bfa91746d622ede42cfb770c962efb943de6d82855978",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.164Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85dc50b2f84f22ca2636eabb9a7ec39c8c983a1a92511f86c489f4bab7b24b58c43bb8deccf8ed362ae17d3f73f7f2fa",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.385Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85e44e45eb84652717c6b4c3adc8d94a10da6584b13c66107c96158a5b643ae759430feebfc433cf5e7c09c119e74c92",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.498Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "85eed9e7d902d0680c90958f8d4cf9533ec7540a2c82ef51b1d6a9c47bfd07c7f1a4488fd0f0b142563f9ad3a09a84c0",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.280Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8666ed900d79518e0e254796fa35f336ced7096255c95ccb189526e7ff80c2977e73cfcde2721fcfdd957e36f1dad105",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.624Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "86723c8d805bb8fb226734055ae8212ada0879425f69b17a4e16acdfbdd95bc84930a9b2c4cb992c640f3a62d9c02da7",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.741Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8680b801a5480857a70ea3b6cb99886dc0517b9d17afed4a23370125e9150c1d409bcf91a1a56c0310db720b88e7116f",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.867Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8684e179575b29005d7ee646f2522823bdde113577a201e8834382b6142e1b58561b4ee9f31411977b9cf8ac6693628e",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.386Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8693c6e289bf936b574c4a1d84d7ce63a63dc8d3b949faef07d480c571c7ae06ecddde90bf17c1d9d33da733193e1d89",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.298Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "86b0435239d0a6d401ac06dbdba5b59b22140a4af6941961000b8d2f46ade5560fc46cea3c1a9a7396ba3ea108bfc8d1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.414Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "86c2e988a1f8a87a29399bb2a0ae7a01c5d45774cba483ddfb8768c67d5f5ed72f5f99e8ae0eb8ddd540f84c3dc7ee50",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:26.983Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "86c6db0301cad3d78e0adc9698d867119a7b35091c4058c3699e025ed36e8920a047449e1d8bc942ba724b5a3c147beb",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.528Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8781a2a3735e00493d94ad4ad6131d83f3823b366e3c4b0b4df0b54607d42f0e9c55cd3a627d543b3423b770bd9f056a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.638Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "878ed78dd1fd23d6fd0e6042eb374fd172c00e6a9b6cbfa6560a0fe662e15fdb4831fa9a947fff9383333f8e7b7cc6e9",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.492Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "878f58a76d740cdb3ee5b19a5c88a5ef44172e3957984af07a944d672299cdb49b6e406a64835287be9577ded30f96e7",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.745Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "87afeaf97df3836baa1b96a6d16e3c905187a11d169b9057b7269d073ca9effeebc07c330266858651e69c4ed4008f23",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.596Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "87b3d3356e4157cca59e599553e93d4c7ca138954c721cae4943bb6edd88797f929209036bd66121da94db0210ea0ffd",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.852Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "87c37f21d2167e039dadfb8c54abaf2f1b707c9357cc6c41899a8bf98361a811ec5cd7242f7083a216fa704e217caa03",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:02.957Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "87eeaf01c4e8a1da963035eb8d7467a4c735513bac15722078a3bf654ccf4f958e723ee29bc841715708bc4e4fb85802",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:27.118Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "87f0075eb1e3ad6a828f57675e3cb3b4156b910afe8df19624959a6b299586f97fa7c10cc31f1a48d937d7f8ecb38d5e",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:03.071Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "885fbd9d034068f3edc1e716cfe6bd15f364878dc69b9b8a30a4accaf3b869ff7297545f8f8413618e2f69a7f812d48f",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:27.235Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "886cb81d353dd0eebf80b2d6149ef480aac0009b2b9a5bf5ef9636f885c6551ef0989fbe03d46efeceb2f39098729365",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T09:38:03.192Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "8872c91784cf36ef22209014837c01feb3e7f0dff98a18b8a0c1d8414ebe7f98c61cf3446f680a0cdfcf23db597930a1",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.702Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "888801c01fe56b8191b872eddba0a58979eb3517741eab74eab99c5eb1bbdad18371d7a0d3da364153e028fe502448a5",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-28T10:41:27.360Z"
+    },
+    {
+      "status": "Active",
+      "public_key": "889dcfd2f399e4cc2efa7738769f66f55651c020794e550ee8b561437352d2c7666b6f46f570d987f3625848e711d31a",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_public_key_valid": true,
+      "is_shares_valid": true,
+      "is_operators_valid": true,
+      "updated_at": "2024-08-27T13:25:14.809Z"
+    }
+  ],
+  "operators": [
+    {
+      "id": 334,
+      "name": "P2P - Puffer 1",
+      "performance": {
+        "24h": 98.37247987988493,
+        "30d": 99.153658626453
+      },
+      "status": "Active",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_active": 1,
+      "validators_count": 500,
+      "whitelist_addresses": [
+        "0xe22dE1d7A27AfaB02fC25F9b2B0cb538a26548c2"
+      ],
+      "is_private": true,
+      "whitelisting_contract": ""
+    },
+    {
+      "id": 335,
+      "name": "P2P - Puffer 2",
+      "performance": {
+        "24h": 99.90770484639977,
+        "30d": 99.45187058115651
+      },
+      "status": "Active",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_active": 1,
+      "validators_count": 500,
+      "whitelist_addresses": [
+        "0xe22dE1d7A27AfaB02fC25F9b2B0cb538a26548c2"
+      ],
+      "is_private": true,
+      "whitelisting_contract": ""
+    },
+    {
+      "id": 655,
+      "name": "stakefish - puffer 3",
+      "performance": {
+        "24h": 98.28887116974913,
+        "30d": 96.72961969059322
+      },
+      "status": "Active",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_active": 1,
+      "validators_count": 500,
+      "whitelist_addresses": [
+        "0xe22dE1d7A27AfaB02fC25F9b2B0cb538a26548c2"
+      ],
+      "is_private": true,
+      "whitelisting_contract": ""
+    },
+    {
+      "id": 656,
+      "name": "stakefish - puffer 4",
+      "performance": {
+        "24h": 98.25063158044236,
+        "30d": 92.75477037541046
+      },
+      "status": "Active",
+      "is_valid": true,
+      "is_deleted": false,
+      "is_active": 1,
+      "validators_count": 500,
+      "whitelist_addresses": [
+        "0xe22dE1d7A27AfaB02fC25F9b2B0cb538a26548c2"
+      ],
+      "is_private": true,
+      "whitelisting_contract": ""
+    }
+  ],
+  "pagination": {
+    "total": 500,
+    "page": 1,
+    "pages": 5,
+    "per_page": 100
+  }
+}

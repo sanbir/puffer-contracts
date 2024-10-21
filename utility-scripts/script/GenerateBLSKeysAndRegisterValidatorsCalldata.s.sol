@@ -32,8 +32,8 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
         string memory path = string.concat(root, "/registration-data/safe_puffer.json");
         string memory json = vm.readFile(path);
 
-        Tx[] memory transactions = new Tx[](4);
-        for (uint256 i = 0; i < 4; i++) {
+        Tx[] memory transactions = new Tx[](3);
+        for (uint256 i = 0; i < 3; i++) {
             transactions[i] = getTx(i, json);
         }
 
@@ -43,21 +43,13 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
     function getCluster(uint256 i) internal returns(ISSVClusters.Cluster memory cluster) {
         if (i == 0) {
             cluster = ISSVClusters.Cluster({
-                validatorCount: 500,
-                networkFeeIndex: 83408029029,
-                index: 46873400,
-                active: true,
-                balance: 96142583030800000000
-            });
-        } else if (i == 1) {
-            cluster = ISSVClusters.Cluster({
                 validatorCount: 384,
                 networkFeeIndex: 83626815184,
                 index: 0,
                 active: true,
                 balance: 79040466507250000000
             });
-        } else if (i == 2) {
+        } else if (i == 1) {
             cluster = ISSVClusters.Cluster({
                 validatorCount: 476,
                 networkFeeIndex: 83619801959,
@@ -65,7 +57,7 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
                 active: true,
                 balance: 84665909903500000000
             });
-        } else if (i == 3) {
+        } else if (i == 2) {
             cluster = ISSVClusters.Cluster({
                 validatorCount: 475,
                 networkFeeIndex: 78447678909,
