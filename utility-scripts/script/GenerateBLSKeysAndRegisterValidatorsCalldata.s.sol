@@ -20,14 +20,14 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
     using stdJson for string;
 
     address public ssvNtworkAddress = 0xDD9BC35aE942eF0cFa76930954a156B3fF30a4E1;
-    address public safe = 0x7465169A70212f7069623E7eA4e86605a8096D54;
+    address public safe = 0x759C1d68eaEb808Bb56519D59A1F49244086A892;
 
     struct Tx {
         address to;
         bytes data;
     }
 
-    uint256 constant count = 3;
+    uint256 constant count = 1;
 
     function run() public {
         string memory root = vm.projectRoot();
@@ -84,14 +84,14 @@ contract GenerateBLSKeysAndRegisterValidatorsCalldata is Script {
         operatorIds[2] = uint64(operator_ids[2]);
         operatorIds[3] = uint64(operator_ids[3]);
 
-        ISSVClusters.Cluster memory cluster = getCluster(i);
+        // ISSVClusters.Cluster memory cluster = getCluster(i);
 
-        bytes memory bulkRemoveValidatorCalldata = abi.encodeCall(
-            ISSVClusters.bulkRemoveValidator,
-            (pubkeys, operatorIds, cluster)
+        bytes memory bulkExitValidatorCalldata = abi.encodeCall(
+            ISSVClusters.bulkExitValidator,
+            (pubkeys, operatorIds)
         );
 
-        tx = Tx({ to: ssvNtworkAddress, data: bulkRemoveValidatorCalldata });
+        tx = Tx({ to: ssvNtworkAddress, data: bulkExitValidatorCalldata });
     }
 
     function _createSafeJson(address safe, Tx[] memory transactions) internal {

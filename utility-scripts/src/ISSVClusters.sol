@@ -34,4 +34,17 @@ interface ISSVClusters {
      * @param cluster All the cluster data.
      */
     event ValidatorRemoved(address indexed owner, uint64[] operatorIds, bytes publicKey, Cluster cluster);
+
+    /// @notice Fires the exit event for a set of validators
+    /// @param publicKeys The public keys of the validators to be exited
+    /// @param operatorIds Array of IDs of operators managing the validators
+    function bulkExitValidator(bytes[] calldata publicKeys, uint64[] calldata operatorIds) external;
+
+    /**
+     * @dev Emitted when a validator begins the exit process.
+     * @param owner The owner of the exiting validator.
+     * @param operatorIds The operator IDs managing the validator.
+     * @param publicKey The public key of the exiting validator.
+     */
+    event ValidatorExited(address indexed owner, uint64[] operatorIds, bytes publicKey);
 }
